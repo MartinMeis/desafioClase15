@@ -1,0 +1,151 @@
+/*variables titulos*/
+$colorTitulo: #666633;
+$tamañoTitulo: 35px;
+$fuenteTitulo: Josefin Sans;
+
+/*variables parrafos*/
+$tamañoparrafos: 18px;
+$fuenteparrafo: candara;
+$interlineadoparrafo: 25px;
+$alineacionparrafo: justify;
+
+/*Operaciones imágenes*/
+$ancho:350px;
+
+/*mixin alto ancho*/
+@mixin altoAncho ($width, $height) {
+   height: $height;
+   width: $width;
+   }
+
+body{
+	background-color: #ddff99;
+	margin: 3px;
+}
+
+/*scss del header*/
+.header{
+   	background-color: #e5592e;
+   	background-image: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,0));  	
+}
+nav{ 
+	background-color: #e5592e;
+   	background-image: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,0));
+   	margin: 0px;
+}
+
+nav ul { 
+	margin: 0px 5px 0px 65px;
+		li a { 
+				color: #e6e6ff; 
+				line-height: 30px;
+				font-family: Manrope;
+				font-size: 20px;
+				text-decoration: none;
+				margin-right: 35px; 
+			}
+}
+.submenu {
+	background-color: #e5592e;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,0));
+	margin: 0px;
+		a {
+   			color: #e6e6ff;
+		  }
+}
+
+/*css de footer*/
+footer{ 
+	background-image: url(https://4.bp.blogspot.com/-lwKEWM1wmoo/UAMLMMPu6mI/AAAAAAAACJY/dd-clVhnN2s/s400/titulo%2Bvisible%2Bblog%2B2012%2Bc.png);
+	background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #ff8533;
+}
+.footer__redesSociales{
+	display: flex; 
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    	#subir {
+				color: white; 
+				font-size: 20px;
+				font-family: Book Antiqua;
+				margin-left: 20px;
+				}
+}
+.redesSociales__imagen{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 10px 75px 0px 0px;
+}
+
+/*css de carrusel*/
+.carousel{
+	margin-top: 10px;
+}
+
+/*scss Index*/
+.peuhec__titulo{
+	color: $colorTitulo; 
+	font-size: $tamañoTitulo;
+	font-family: $fuenteTitulo; 
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+.parrafo__Index{
+	font-size: $tamañoparrafos; 
+	line-height: $interlineadoparrafo;
+	font-family: $fuenteparrafo;
+	text-align: $alineacionparrafo;	
+}
+.imagenIndex{
+	width:$ancho*2;
+}
+
+/*bucle Index*/
+@for $i from 1 through 3 {
+	.colorparrafo-#{$i}{width:450px * $i; background-color: #629e79;}
+}
+
+/*scss de NuestrosObjetivos*/
+.titulo__Objetivos{
+	color: $colorTitulo; 
+	font-size: $tamañoTitulo;
+	font-family: $fuenteTitulo; 
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	width: $ancho*3;
+	background-color: #629e79;
+}
+.texto__Objetivos{
+	font-size: $tamañoparrafos; 
+	line-height: $interlineadoparrafo;
+	font-family: $fuenteparrafo;
+	text-align: $alineacionparrafo;
+	padding-top: 15px;
+	align-items: center;
+	padding-top: 90px;
+}
+/*scss de NuestroLibro*/
+.titulo__NuestroLibro{
+	color: $colorTitulo; 
+	font-size: $tamañoTitulo;
+	font-family: $fuenteTitulo; 
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+#imagen__NuestroLibro{
+	text-align: center;
+		.imagen__NuestroLibro--tamaño{
+			@include altoAncho (360px, 500px)
+		}
+}
